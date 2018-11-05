@@ -40,6 +40,9 @@ body{
   display:flex;
   justify-content: space-between;
   padding:20px;
+  background: linear-gradient(to top, transparent,#222 90%);
+  opacity: .6;
+  z-index: 3;
 }
 
 .translate{

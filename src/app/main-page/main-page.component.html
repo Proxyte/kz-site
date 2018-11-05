@@ -4,6 +4,10 @@
     <div class="menu" (click)="showMenu()">
       <img src="../../assets/img/menu_button.svg" alt="">
     </div>
+    <div class="translate">
+      <span class="russian">Русский</span>
+      <span class="kazakh">Қазақша</span>
+    </div>
   </div>
   <div class="title">
     <div class="epoch animated fadeInDown">
@@ -15,7 +19,7 @@
   </div>
   <div class="cards">
     <div *ngFor="let card of list_of_cards;let i = index" (click)="showData(card)">
-        <div class="card local-card" [ngClass]="{'card-big fadeInUp':i%2==0,'card-small fadeInDown':i%2==1}">
+        <div class="card animated local-card" [ngClass]="{'card-big fadeInUp':i%2==0,'card-small fadeInDown':i%2==1}">
           <div class="line-blue"></div>
           <div class="local-card-div">
               <div class="card-image" [ngStyle]="{'background-image':'url('+card.image_url+')'}">
