@@ -24,13 +24,19 @@ export class MainPageComponent implements OnInit {
 
   list_of_cards = [
     {
-      "image_url":"../assets/img/image_1.png",
+      "image_url":"../assets/img/flag.jpg",
       "date":"1900-1991",
       "name":"Казахстан и новые независимые государства",
       "text":"lorem IPSUM 1"
     },
     {
       "image_url":"../assets/img/image_2.png",
+      "date":"1900-1991",
+      "name":"Казахстан и новые независимые государства",
+      "text":"lorem IPSUM 1"
+    },
+    {
+      "image_url":"../assets/img/image_1.png",
       "date":"1900-1992",
       "name":"Казахстан и новые независимые государства",
       "text":"lorem IPSUM 2"

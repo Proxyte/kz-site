@@ -4,10 +4,6 @@
     <div class="menu" (click)="showMenu()">
       <img src="../../assets/img/menu_button.svg" alt="">
     </div>
-    <div class="translate">
-      <span class="russian">Русский</span>
-      <span class="kazakh">Қазақша</span>
-    </div>
   </div>
   <div class="title">
     <div class="epoch animated fadeInDown">
@@ -19,7 +15,7 @@
   </div>
   <div class="cards">
     <div *ngFor="let card of list_of_cards;let i = index" (click)="showData(card)">
-        <div class="card local-card" [ngClass]="{'col-12 col-md-3 fadeInUp':i==0 && i%2==0,'col-12 col-md-2 fadeInDown':i%2==1}">
+        <div class="card local-card" [ngClass]="{'card-big fadeInUp':i%2==0,'card-small fadeInDown':i%2==1}">
           <div class="line-blue"></div>
           <div class="local-card-div">
               <div class="card-image" [ngStyle]="{'background-image':'url('+card.image_url+')'}">
@@ -32,7 +28,7 @@
                 <div class="description_div">
                   <span>{{card.date}}</span>
                   <br>
-                  <span>{{card.name}}</span>
+                  <span class="card-name">{{card.name}}</span>
                 </div>
             </div>
           </div>
@@ -40,11 +36,11 @@
     </div>
   </div>
 
-  <div class="col-12 modal-show" *ngIf="show" (click)="overlayClicked($event)">
-    <div class="modal-show-content" [ngClass]="{'animated fadeInDown':show}" #modal>
-      <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At aut blanditiis cumque deleniti deserunt distinctio doloribus ducimus ea exercitationem magnam molestiae neque, pariatur, perferendis qui rem sunt suscipit ut voluptatum!</span>
-    </div>
-  </div>
+  <!--<div class="col-12 modal-show" *ngIf="show" (click)="overlayClicked($event)">-->
+    <!--<div class="modal-show-content" [ngClass]="{'animated fadeInDown':show}" #modal>-->
+      <!--<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At aut blanditiis cumque deleniti deserunt distinctio doloribus ducimus ea exercitationem magnam molestiae neque, pariatur, perferendis qui rem sunt suscipit ut voluptatum!</span>-->
+    <!--</div>-->
+  <!--</div>-->
 
   <div class="modal-menu modal-show" [hidden]="!menupanel">
     <div class="modal-menu-div modal-show-content" [ngClass]="{'animated fadeInDown':menupanel}" #menu>
@@ -52,13 +48,13 @@
         <img src="../assets/img/plus.svg" alt="">
       </div>
       <div class="menu-div col-md-11">
-        <div class="menu-text col-md-5">
+        <div class="menu-text">
           <span class="menu-span">МЕНЮ</span>
           <span class="about-book">О КНИГЕ</span>
           <span class="contacts">КОНТАКТЫ</span>
         </div>
         <div class="book">
-          <img src="../assets/img/book.png" alt="">
+          <img src="../assets/img/book.svg" alt="">
         </div>
       </div>
     </div>

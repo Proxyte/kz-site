@@ -47,7 +47,7 @@ body{
 }
 
 .slick-dots li.slick-active button {
-  background-color: orange;
+  background-color: yellow;
 }
 
 .slick-dots li.slick-active button:before {
@@ -67,10 +67,10 @@ body{
   display:block;
   border-radius:100%;
   border:1px solid grey;
-  width:43px;
-  height:43px;
-  margin-top:-19px;
-  margin-left:-20.5px;
+  width:42px;
+  height:42px;
+  margin-top:-18px;
+  margin-left:-20px;
 }
 
 .slick-dots li.slick-active button:before{
@@ -90,6 +90,10 @@ body{
     right:0;
     left:0;
     bottom:0;
+  }
+
+  .blue-bg{
+    z-index:1 !important;
   }
 
   .slick-dots li.slick-active button:after{
@@ -119,6 +123,16 @@ body{
   .kazakh,.russian{
     margin:0 10px;
     font-size:13px;
+  }
+
+  .card-big{
+    width:250px !important;
+    height:280px !important;
+  }
+
+  .card-small{
+    width:187px !important;
+    height:247px !important;
   }
 }
 
