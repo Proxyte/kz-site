@@ -41,20 +41,78 @@
   </div>
 
   <div class="col-12 modal-show" *ngIf="show" (click)="overlayClicked($event)">
-    <div class="modal-show-content" [ngClass]="{'animated fadeInDown':show,'color':'blacks'}" #modal>
-      <button type="button" class="close" (click)="closeModal()">
-        <span>&times;</span>
-      </button>
-      <div class="picture col-sm-8">
-        <div class="сol-sm-8 col-md-5 col-lg-5 image-div" *ngIf="show_modal_image">
-          <img src="{{modal_object.image_url}}" alt="" [ngClass]="{'animated zoomIn delay-1s':show_modal_image}">
-        </div>
-        <div *ngIf="show_modal_text">
-          <h4 class="modal-name" [ngClass]="{'animated flipInX delay-1s':show_modal_title}">{{modal_object.name}}</h4>
-        </div>
+    <div class="modal-show-content" #modal>
+      <div class="bg-modal">
+        <div class="dark-modal">
 
-        <div class="modal-description" *ngIf="show_modal_text">
-          <span [ngClass]="{'animated bounceIn delay-1s':show_modal_text}">{{modal_object.text}}</span>
+        </div>
+          <button type="button" class="close" (click)="closeModal()">
+            <img src="../../assets/img/plus.svg" alt="">
+          </button>
+          <div class="bg-modal-text-div" *ngIf="show_modal_title" [ngClass]="{'animated fadeIn delay-0.5s':show_modal_title}">
+            <span class="bg-modal-text">Эра Стратегия «Казахстан-2050»: новый казахстанский патриотизм </span>
+          </div>
+      </div>
+
+      <div class="modal-div-center col-sm-8">
+        <div class="social">
+          <div class="social-divs">
+            <div class="visible-card">
+              <img src="../../assets/img/Visible.svg" alt="">
+              <span>0</span>
+            </div>
+            <div class="social-card">
+              <img src="../../assets/img/vk.svg" alt="">
+              <span>0</span>
+            </div>
+            <div class="social-card">
+              <img src="../../assets/img/facebook.svg" alt="">
+              <span>0</span>
+            </div>
+            <div class="social-card">
+              <img src="../../assets/img/odnoklassniki.svg" alt="">
+              <span>0</span>
+            </div>
+            <div class="social-card">
+              <img src="../../assets/img/google.svg" alt="">
+              <span>0</span>
+            </div>
+            <div class="social-card">
+              <img src="../../assets/img/twitter.svg" alt="">
+              <span>0</span>
+            </div>
+          </div>
+        </div>
+        <div class="picture col-10">
+          <div class="modal-description" *ngIf="show_modal_text" [ngClass]="{'animated fadeIn delay-1s':show_modal_text}">
+            <p>
+              Новая книга Президента Нурсултана Назарбаева «Эра независимости» — это фундаментальный кейс о том, как нужно управлять изменениями в масштабах государства, как «зарядить» нацию на модернизационный прорыв и как исторические возможности превратить в действительность. В ней также раскрываются смыслы и значения трех волн модернизации Казахстана, описываются уникальные примеры публичной и личностной дипломатии.
+            </p>
+            <p>
+              Особенно интересно читать персональные воспоминания Главы государства о его встречах с первыми лицами мировой политики. На страницах книги можно встретить формальные и неформальные диалоги с председателями КНР Цзян Цзэминем и Си Цзиньпинем, президентами России Ельциным, Путиным, президентами США Дж. Бушем старшим и младшим, лидерами европейских государств Тэтчер, Саркози, Шредером и многими другими.
+            </p>
+            <p>
+              В сегодняшнем мире, полном противоречий и конфронтаций, быть одинаково признанным и уважаемым политиком в странах с разно-полярными взглядами чрезвычайно сложно. Однако это, безусловно, удается нашему Президенту и его сегодняшнее признание в мире, а также факты, изложенные в книге, этому яркое подтверждение. Его всесторонняя компетентность позволяет разбираться практически во всех вопросах, связанных с государственным строительством, от различных отраслей реальной экономики до чувствительных вопросов дипломатии.
+            </p>
+            <p>
+              Один из эпизодов книги хорошо описывает эту характерную черту Президента. Например, в книге он вспоминает, как детально рассказывал Президенту США Дж. Бушу-старшему о технологиях транспортировки и химического состава одного из крупнейших месторождений Казахстана. Тогда американский лидер был впечатлен такими подробностями и был уверен, что его собеседник — нефтяник по образованию, поскольку профессиональные политики редко разбираются в технологических тонкостях производственного процесса. Все это говорит о достаточно серьезном подходе Главы государства к любым вопросам государственной политики.
+            </p>
+            <p>
+              Все права защищены.
+            </p>
+            <p>
+              При использовании материалов primeminister.kz в любых целях, кроме личных, гиперссылка на веб-сайт primeminister.kz обязательна.
+            </p>
+            <p>
+              При использовании материалов primeminister.kz:
+            </p>
+            <p>
+              – в печатных изданиях или в иных формах на материальных носителях – бумага, пленка и т. п., пользователь обязан в каждом случае указывать, что источником материалов является веб-сайт www.primeminister.kz;
+            </p>
+            <p>
+              – в Интернете или иных формах использования в электронном виде, пользователь в каждом случае использования обязан размещать гиперссылку на главную страницу веб-сайта Премьер-Министра РК «www.primeminister.kz».
+            </p>
+          </div>
         </div>
       </div>
     </div>

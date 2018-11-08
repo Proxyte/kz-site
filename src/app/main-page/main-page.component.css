@@ -31,10 +31,6 @@ body{
   overflow:auto;
 }
 
-.modal-show-content .animated{
-  -webkit-animation-duration: 2s;
-  animation-duration: 0.5s;
-}
 
 .blue-bg{
   position:fixed;
@@ -106,7 +102,8 @@ body{
   z-index: 2;
 }
 
-.picture{
+.modal-div-center{
+  display:flex;
   margin:0 auto;
   height:100%;
 }
@@ -118,8 +115,27 @@ body{
   z-index:2;
 }
 
-.local-card-div:hover{
+.local-card-div:hover,.menu:hover,.social-card:hover{
   cursor: pointer;
+}
+
+.bg-modal{
+  background-image:url(/../../assets/img/image_5.svg);
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:cover;
+  height:507px;
+  position: relative;
+}
+
+.bg-modal-text-div{
+  font-size:38px;
+  font-weight:900;
+  position: absolute;
+  left:20%;
+  bottom:50px;
+  color:#fff;
+  width:60%;
 }
 
 .card-body{
@@ -210,7 +226,7 @@ body{
 
 .description_div{
   font-size:16px;
-  font-weight:700;
+  font-weight:900;
   padding:10px 10px 0 10px;
 
 }
@@ -280,7 +296,47 @@ body{
   top:0;
   left:0;
   height:100vh;
-  z-index:5
+  z-index:5;
+  padding:0;
+}
+
+.social{
+  margin-right:50px;
+}
+
+.social-divs{
+  margin-top:66px;
+}
+
+.social-card{
+  border: 1px solid #DDDDDD;
+  text-align: center;
+  border-radius: 14px;
+  padding: 3px;
+  color:#B8B8B8;
+  width:90px;
+  height:30px;
+  margin-bottom:30px;
+}
+
+.visible-card{
+  width:90px;
+  height:30px;
+  margin-bottom:30px;
+  color:#B8B8B8;
+  text-align: start;
+  border-bottom:1px solid #dddddd !important;
+}
+
+
+.social-card img,.visible-card img{
+  margin-right:12px;
+}
+
+.modal-description{
+  font-weight:400;
+  line-height:23px;
+  margin-top:66px;
 }
 
 .show{
@@ -312,17 +368,18 @@ body{
 .menu-text{
   display:flex;
   flex-direction:column;
+  color:#fff;
 }
 
 .menu-span{
   font-weight:300;
   font-size:30px;
-  color:orange;
+  color:#DED676;
 }
 
 .about-book,.contacts{
   display:block;
-  font-weight:700;
+  font-weight:900;
   font-size:50px
 }
 
@@ -342,19 +399,20 @@ body{
 }
 
 .close{
-  position: fixed;
-  top:5px;
-  right:10px;
+  position: absolute;
+  top:32px;
+  right:36px;
 }
 
 .modal-show-content{
   background-color: white;
   margin: auto;
-  padding: 20px;
+  /*padding: 20px;*/
   border-radius:5px;
   height:100%;
   z-index:10;
 }
+
 
 .vertical-line{
   height:100vh;
@@ -375,9 +433,45 @@ body{
   z-index:4;
 }
 
+.dark-modal{
+  width:100%;
+  background-image: linear-gradient(#f9fcff, #000000);
+  position: fixed;
+}
+
+
 @media screen and (max-width:992px){
   .about-book,.contacts{
     font-size:35px;
+  }
+
+  .modal-div-center{
+    flex-direction:column;
+  }
+
+  .social-divs,.social{
+    display:flex;
+  }
+
+  .social-divs{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .modal-description{
+    margin-top:55px;
+  }
+
+  .picture{
+    margin:0 auto;
+  }
+
+  .social-card,.visible-card{
+    margin-right:20px;
+  }
+
+  .social{
+    margin-right:0;
   }
 }
 
@@ -395,6 +489,10 @@ body{
   .menu-div {
     flex-direction: column;
     align-items: center;
+  }
+
+  .bg-modal{
+    height:300px;
   }
 
   .book img{
@@ -420,12 +518,23 @@ body{
     padding-left:5px;
     width:400px;
   }
+
+  .bg-modal-text-div{
+    left:20%;
+    font-size:25px;
+    width:70%;
+    bottom:7%;
+  }
 }
 
 @media screen and (max-width:576px){
   .independent img{
     padding-left:5px;
     width:300px;
+  }
+
+  .bg-modal{
+    height:200px;
   }
 
   .about-book,.contacts{
@@ -437,7 +546,7 @@ body{
   }
 
   .book img{
-    width:200px;
+    width:250px;
   }
 
   .navigation-panel{
@@ -464,6 +573,22 @@ body{
     font-size:10px;
   }
 
+  .bg-modal-text-div{
+    width:100%;
+    left:2%;
+    font-size:18px;
+    bottom:7%;
+  }
+
+  .social-divs{
+    margin-top:30px;
+  }
+}
+
+@media screen and (max-width:360px){
+  .modal-description{
+    margin-top:125px;
+  }
 }
 
 
