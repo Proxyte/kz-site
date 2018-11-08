@@ -40,14 +40,28 @@
     </div>
   </div>
 
-  <!--<div class="col-12 modal-show" *ngIf="show" (click)="overlayClicked($event)">-->
-    <!--<div class="modal-show-content" [ngClass]="{'animated fadeInDown':show}" #modal>-->
-      <!--<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At aut blanditiis cumque deleniti deserunt distinctio doloribus ducimus ea exercitationem magnam molestiae neque, pariatur, perferendis qui rem sunt suscipit ut voluptatum!</span>-->
-    <!--</div>-->
-  <!--</div>-->
+  <div class="col-12 modal-show" *ngIf="show" (click)="overlayClicked($event)">
+    <div class="modal-show-content" [ngClass]="{'animated fadeInDown':show,'color':'blacks'}" #modal>
+      <button type="button" class="close" (click)="closeModal()">
+        <span>&times;</span>
+      </button>
+      <div class="picture col-sm-8">
+        <div class="сol-sm-8 col-md-5 col-lg-5 image-div" *ngIf="show_modal_image">
+          <img src="{{modal_object.image_url}}" alt="" [ngClass]="{'animated zoomIn delay-1s':show_modal_image}">
+        </div>
+        <div *ngIf="show_modal_text">
+          <h4 class="modal-name" [ngClass]="{'animated flipInX delay-1s':show_modal_title}">{{modal_object.name}}</h4>
+        </div>
+
+        <div class="modal-description" *ngIf="show_modal_text">
+          <span [ngClass]="{'animated bounceIn delay-1s':show_modal_text}">{{modal_object.text}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="modal-menu modal-show" [hidden]="!menupanel">
-    <div class="modal-menu-div modal-show-content" [ngClass]="{'animated fadeInDown':menupanel}" #menu>
+    <div class="modal-menu-div modal-show-content" [ngClass]="{'animated fadeInDown': menupanel}" #menu>
       <div class="close_btn" (click)="showMenu()">
         <img src="../assets/img/plus.svg" alt="">
       </div>

@@ -1,7 +1,7 @@
 /*@import url('../../assets/css/reset.css');*/
 
 *{
-  color:#fff;
+  /*color:#fff;*/
   font-family:Roboto;
   /*color:#000;*/
 }
@@ -27,6 +27,15 @@ body{
   z-index:1;
 }
 
+.modal-show-content{
+  overflow:auto;
+}
+
+.modal-show-content .animated{
+  -webkit-animation-duration: 2s;
+  animation-duration: 0.5s;
+}
+
 .blue-bg{
   position:fixed;
   width:100%;
@@ -47,6 +56,21 @@ body{
 
 .translate{
   display:flex;
+  color:#fff;
+}
+
+.image-div{
+  margin:0 auto;
+}
+
+.image-div img{
+  width:100%;
+}
+
+.modal-name{
+  margin-top:20px;
+  font-size:25px;
+  text-align:center;
 }
 
 .kazakh,.russian{
@@ -78,9 +102,13 @@ body{
   /*overflow:hidden;*/
 }
 
-.cards{
-  z-index:2;
+.cards {
+  z-index: 2;
+}
 
+.picture{
+  margin:0 auto;
+  height:100%;
 }
 
 .card{
@@ -126,6 +154,7 @@ body{
 .local-card-div{
   box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.75);
   z-index:4;
+  color:#fff;
 }
 
 .slick-slide:nth-child(odd){
@@ -254,6 +283,10 @@ body{
   z-index:5
 }
 
+.show{
+  display:block;
+}
+
 .modal-menu{
   position: fixed;
   border-radius:inherit;
@@ -306,6 +339,12 @@ body{
   position: fixed;
   top:20px;
   left:20px;
+}
+
+.close{
+  position: fixed;
+  top:5px;
+  right:10px;
 }
 
 .modal-show-content{
@@ -411,6 +450,18 @@ body{
 
   .title{
     margin:0 0 0 10px;
+  }
+
+  .modal-name{
+    font-size:16px;
+  }
+
+  .picture{
+    text-align:center;
+  }
+
+  .modal-description{
+    font-size:10px;
   }
 
 }
