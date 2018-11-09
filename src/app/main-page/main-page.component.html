@@ -42,16 +42,15 @@
 
   <div class="col-12 modal-show" *ngIf="show" (click)="overlayClicked($event)">
     <div class="modal-show-content" #modal>
-      <div class="bg-modal">
-        <div class="dark-modal">
-
-        </div>
+      <div class="dark-modal">
+        <div class="bg-modal">
           <button type="button" class="close" (click)="closeModal()">
             <img src="../../assets/img/plus.svg" alt="">
           </button>
           <div class="bg-modal-text-div" *ngIf="show_modal_title" [ngClass]="{'animated fadeIn delay-0.5s':show_modal_title}">
             <span class="bg-modal-text">Эра Стратегия «Казахстан-2050»: новый казахстанский патриотизм </span>
           </div>
+        </div>
       </div>
 
       <div class="modal-div-center col-sm-8">
