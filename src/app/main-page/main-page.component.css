@@ -138,6 +138,10 @@ body{
   width:60%;
 }
 
+.slick-active{
+  outline:none;
+}
+
 .card-body{
   background-color:#212A39;
   padding:10px 10px 20px 10px;
