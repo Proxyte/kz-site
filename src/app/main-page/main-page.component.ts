@@ -9,7 +9,7 @@ export class MainPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    // this.giveClasses();
+    console.log("hi");
   }
 
   show = false;

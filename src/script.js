@@ -1,15 +1,6 @@
 $(document).ready(function(){
 
   var array = document.getElementsByClassName('card');
-  $('.your-class').slick({
-    dots: true,
-    infinite: true,
-    speed: 300,
-    slidesToShow: 1,
-    centerMode: true,
-    variableWidth: true
-  });
-
   $('.cards').slick({
     dots: true,
     infinite: true,
@@ -18,7 +9,8 @@ $(document).ready(function(){
     slidesToShow: 1,
     initialSlide:2,
     centerMode: true,
-    variableWidth: true
+    variableWidth: true,
+    touchMove:false
   });
 
   $('.left').click(function(){
