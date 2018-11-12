@@ -30,9 +30,4 @@ $(document).ready(function(){
   });
 
   $('.slick-dots').appendTo(".line");
-
-  var array = document.getElementsByClassName('card')
-  array.forEach(i=>{
-    console.log(i);
-  })
 });
